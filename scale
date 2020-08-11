@@ -1,0 +1,4 @@
+#Configure ASG
+#Configure AMI for ASG
+#Configure new instances to use existing bucket
+#Redis or Memcached instead of APCu ?
