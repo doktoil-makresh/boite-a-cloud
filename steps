@@ -1,0 +1,33 @@
+#Receive expected hostname
+#Receive admin email address
+#Receive boolean for embedded DB
+#If false: Receive username/pwd/hostname/db_type
+#Check hostname is available
+#N: reject with code
+#Y: Go
+#Reserve AWS IPv4 & IPv6
+#Create VPC.
+#If no embeded DB
+##DB in AWS ?
+##Y: VPC Peering possible ?
+###N: Create Nat GW
+###Y: Create VPC peering (permissions ???)
+##N: Create Nat GW
+#Create SG (SSH only from bastion, HTTP/HTTPS from everywhere)
+#Create bucket with name: hostname + randomstring
+#Add entry in a DB with hostname + creation date + S3 bucket name + S3 IAM username + DB insensitive info (embedded or not, VPC peering or not) + VPC + SG + Nat GW if any + IPv4 + IPv6 + Deployement status + AMI name
+#Create EC2 from AMI golden image
+#Attach IPs to this EC2
+#Add entries for $hostname$.boite-a-cloud.makelofine.org with IPs
+#Launch EC2 instance
+#Configure NC with this bucket as primary storage.
+#Embedded DB ?
+#Y:configure DB admin to allow root from EC2, create nc account/pwd for DB
+##???Install DB management GUI
+##Y: return db admin pass
+#N: Go
+#Configure NC with DB details
+#Create admin account with random password, needs to be changed at login
+#Set email on this admin account
+#Return deployement completion
+#Send email to reset admin pwd
