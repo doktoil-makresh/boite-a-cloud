@@ -25,7 +25,7 @@
 #Add entry in a DB with hostname + creation date + S3 bucket name + S3 IAM username + DB insensitive info (embedded or not, VPC peering or not) + VPC + SG + Nat GW if any + IPv4 + IPv6 + Deployement status + AMI name + link to config file stored on S3
 #Update NC DB to set admin account with random password, needs to be changed at login
 #Set email on this admin account
-#Launch EC2 instance with user script retrieving NC config file from a dedicated bucket
+#Launch EC2 instance with user script retrieving NC config file from a dedicated bucket + install systemd scripts (maintenance, certbot)
 #Validate installation
 #Deploy monitoring
 #Return installation completion
