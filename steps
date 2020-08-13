@@ -5,8 +5,7 @@
 #If false: Receive username/pwd/hostname/db_type
 #Check hostname is available
 #N: reject with code
-#Y: Add entries for $hostname$.boite-a-cloud.makelofine.org with IPs
-#Reserve AWS IPv4 & IPv6
+#Y: Store hostname
 #Create VPC.
 #If not RDS DB
 ##DB in AWS ?
@@ -26,6 +25,8 @@
 #Update NC DB to set admin account with random password, needs to be changed at login
 #Set email on this admin account
 #Launch EC2 instance with user script retrieving NC config file from a dedicated bucket + install systemd scripts (maintenance, certbot)
+#Get EC2 instance public IPv4 & IPv6
+#Create CNAME for $hostname$.boite-a-cloud.makelofine.org -> EC2 instance hostname
 #Validate installation
 #Deploy monitoring
 #Return installation completion
